@@ -13,7 +13,7 @@ WORKDIR /home/dyoshikawa
 USER dyoshikawa
 
 RUN pip install --user awscli
-ENV PATH=$PATH:/root/.local/bin
+ENV PATH=$PATH:$HOME/.local/bin
 RUN aws configure set aws_access_key_id dummy && \
     aws configure set aws_secret_access_key dummy && \
     aws configure set default.region us-east-1 && \
